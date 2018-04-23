@@ -1,0 +1,13 @@
+{% extends 'basic_app/basic_app_base.html' %}
+{% block body_block %}
+
+<div class="container">
+  <h1>Create New School Document</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create">
+  </form>
+</div>
+
+{% endblock %}
